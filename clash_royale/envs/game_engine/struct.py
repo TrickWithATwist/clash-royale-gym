@@ -48,7 +48,7 @@ class DefaultScheduler(GameScheduler):
         #checks if the game is in overtime, if game is in overtime the rate is 1.4
          
 
-        return 0
+        return elixir_rate
 
     def game_state(self) -> int:
         """
