@@ -40,13 +40,17 @@ class DefaultScheduler(GameScheduler):
     Class for default 1v1 game scheduling
     """
 
+    def is_overtime(self) -> bool:
+        return False
+
     def elixir_rate(self) -> float:
         #member function to calculate and return the playe elixir rate 
         #establishing essential local variables
         elixir_rate = 2.8 #var for rate, initialized with value 2.8
 
         #checks if the game is in overtime, if game is in overtime the rate is 1.4
-         
+        if(is_overtime(self)):
+            elixir_rate = 1.4
 
         return elixir_rate
 
@@ -61,8 +65,6 @@ class DefaultScheduler(GameScheduler):
     def is_game_over(self) -> bool:
         return False
 
-    def is_overtime(self) -> bool:
-        return False
 
 @dataclasses.dataclass(slots=True)
 class Stats:
