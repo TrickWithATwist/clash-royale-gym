@@ -41,6 +41,13 @@ class DefaultScheduler(GameScheduler):
     """
 
     def elixir_rate(self) -> float:
+        #member function to calculate and return the playe elixir rate 
+        #establishing essential local variables
+        elixir_rate = 2.8 #var for rate, initialized with value 2.8
+
+        #checks if the game is in overtime, if game is in overtime the rate is 1.4
+         
+
         return 0
 
     def game_state(self) -> int:
